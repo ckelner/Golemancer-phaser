@@ -16,8 +16,12 @@ Golemancer.Preload.prototype = {
     this.game.load.audio( 'title_music', 'assets/music/title.mp3' );
     Golemancer.title_music = this.game.add.sound( 'title_music' );
   },
-  
+
   create: function() {
+    /*
+      @ckelner: any delay created by this should "disappear"
+      once more assets are being loaded
+    */
     // check if google fonts are ready
     if( Golemancer.google_font_ready ) {
       // @ckelner: "this" gets lost through using setTimeout, use global scope
