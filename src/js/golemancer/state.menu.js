@@ -24,28 +24,44 @@ Golemancer.Menu.prototype =  {
     }
   },
   setupMenu: function() {
-    this.text = Golemancer.game.add.text(
+    // Game title
+    this.game_title = Golemancer.game.add.text(
       Golemancer.game.world.centerX,
       Golemancer.game.world.centerY,
       "Golemancer"
     );
-    this.text.anchor.setTo( 0.5 );
-    this.text.font = 'Kaushan Script';
-    this.text.fontSize = 60;
-    this.text.fill = '#fff'; // TODO: Snazz it up?
-    this.text.stroke = "#000"; // @ckelner: needed to fit outside the "box"
-    this.text.strokeThickness = 80;
-    this.text.align = 'center'; // center horiz and vert
-    this.text.y = 100; // 100 from top
-    this.text.inputEnabled = true;
-    this.text.input.enableDrag();
-    this.text.events.onInputOver.add( Golemancer.Menu.prototype.menuOver, this );
-    this.text.events.onInputOut.add( Golemancer.Menu.prototype.menuOut, this );
-  },
-  menuOut: function() {
-    this.text.fill = '#fff';
-  },
-  menuOver: function() {
-    this.text.fill = '#ff00ff';
+    this.game_title.anchor.setTo( 0.5 );
+    this.game_title.font = 'Kaushan Script';
+    this.game_title.fontSize = 60;
+    this.game_title.fill = '#fff'; // TODO: Snazz it up?
+    this.game_title.stroke = "#000"; // @ckelner: needed to fit outside the "box"
+    this.game_title.strokeThickness = 80;
+    this.game_title.align = 'center'; // center horiz and vert
+    this.game_title.y = 100; // 100 from top
+
+    // Menu
+    this.new_game = Golemancer.game.add.text(
+      Golemancer.game.world.centerX,
+      Golemancer.game.world.centerY,
+      "New Game"
+    );
+    this.new_game.anchor.setTo( 0.5 );
+    this.new_game.font = 'Merriweather Sans';
+    this.new_game.fontSize = 25;
+    this.new_game.fill = '#fff'; // TODO: Snazz it up?
+    this.new_game.stroke = "#000"; // @ckelner: needed to fit outside the "box"
+    this.new_game.strokeThickness = 30;
+    this.new_game.align = 'center'; // center horiz and vert
+    this.new_game.y = 200; // 100 from top
+    this.new_game.inputEnabled = true;
+    this.new_game.input.enableDrag();
+    this.new_game.events.onInputOver.add(
+      function() { this.new_game.fill = '#00CC00'; },
+      this
+    );
+    this.new_game.events.onInputOut.add(
+      function() { this.new_game.fill = '#fff'; },
+      this
+    );
   }
 };
