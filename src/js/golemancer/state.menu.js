@@ -4,7 +4,28 @@ Golemancer.Menu = function( game ) {
 
 Golemancer.Menu.prototype =  {
   create: function() {
-    // add menu text
+    this.text = Golemancer.game.add.text(
+      Golemancer.game.world.centerX,
+      Golemancer.game.world.centerY,
+      "- phaser -\nrocking with\ngoogle web fonts"
+    );
+    this.text.anchor.setTo(0.5);
+
+    this.text.font = 'Revalia';
+    this.text.fontSize = 60;
+
+    this.text.fill = '#0000ff';
+
+    this.text.align = 'center';
+    this.text.stroke = '#000000';
+    this.text.strokeThickness = 2;
+    this.text.setShadow(5, 5, 'rgba(0,0,0,0.5)', 5);
+
+    this.text.inputEnabled = true;
+    this.text.input.enableDrag();
+
+    this.text.events.onInputOver.add( this.menuOver, this );
+    this.text.events.onInputOut.add( this.menuOut, this ); 
   },
   update: function() {
     if( this.game.input.activePointer.isDown ) {
@@ -22,5 +43,11 @@ Golemancer.Menu.prototype =  {
       */
       Golemancer.game.music.play( '' , 0, 1, true );
     }
+  },
+  menuOut: function() {
+    this.text.fill = '#0000ff';
+  },
+  menuOver: function() {
+    this.text.fill = '#ff00ff';
   }
 };

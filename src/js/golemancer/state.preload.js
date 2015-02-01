@@ -11,6 +11,8 @@ Golemancer.Preload.prototype = {
       'progress_bar'
     );
     this.game.load.setPreloadSprite( this.preload_bar );
+    // load google webfonts script
+    this.game.load.script('webfont', '//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js');
     this.game.load.audio( 'title_music', 'assets/music/title.mp3' );
     Golemancer.title_music = this.game.add.sound( 'title_music' );
   },
