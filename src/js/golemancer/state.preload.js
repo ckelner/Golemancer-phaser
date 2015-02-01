@@ -16,8 +16,15 @@ Golemancer.Preload.prototype = {
     this.game.load.audio( 'title_music', 'assets/music/title.mp3' );
     Golemancer.title_music = this.game.add.sound( 'title_music' );
   },
+  
   create: function() {
-    //Load menu
-    this.game.state.start('Menu');
+    // check if google fonts are ready
+    if( Golemancer.google_font_ready ) {
+      // @ckelner: "this" gets lost through using setTimeout, use global scope
+      Golemancer.game.state.start('Menu');
+    } else {
+      // if not ready, try again in 0.15 seconds
+      setTimeout( Golemancer.Preload.prototype.create, 150 );
+    }
   }
 };

@@ -7,7 +7,7 @@ WebFontConfig = {
 
   //  The Google Fonts we want to load
   google: {
-    families: ['Revalia']
+    families: [ 'Kaushan Script' ]
   }
 };
 
@@ -19,7 +19,7 @@ function fontReady() {
     "."
   );
   this.text.anchor.setTo(0.5);
-  this.text.font = 'Revalia';
+  this.text.font = 'Kaushan Script';
   this.text.fontSize = 1;
   this.text.fill = '#000';
   Golemancer.google_font_ready = true;

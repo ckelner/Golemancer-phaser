@@ -24,35 +24,26 @@ Golemancer.Menu.prototype =  {
     }
   },
   setupMenu: function() {
-    if( Golemancer.google_font_ready ) {
-      this.text = Golemancer.game.add.text(
-        Golemancer.game.world.centerX,
-        Golemancer.game.world.centerY,
-        "- phaser -\nrocking with\ngoogle web fonts"
-      );
-      this.text.anchor.setTo(0.5);
-
-      this.text.font = 'Revalia';
-      this.text.fontSize = 60;
-
-      this.text.fill = '#0000ff';
-
-      this.text.align = 'center';
-      this.text.stroke = '#000000';
-      this.text.strokeThickness = 2;
-      this.text.setShadow(5, 5, 'rgba(0,0,0,0.5)', 5);
-
-      this.text.inputEnabled = true;
-      this.text.input.enableDrag();
-
-      this.text.events.onInputOver.add( this.menuOver, this );
-      this.text.events.onInputOut.add( this.menuOut, this ); 
-    } else {
-      setTimeout( this.setupMenu, 500 );
-    }
+    this.text = Golemancer.game.add.text(
+      Golemancer.game.world.centerX,
+      Golemancer.game.world.centerY,
+      "Golemancer"
+    );
+    this.text.anchor.setTo( 0.5 );
+    this.text.font = 'Kaushan Script';
+    this.text.fontSize = 60;
+    this.text.fill = '#fff'; // TODO: Snazz it up?
+    this.text.stroke = "#000"; // @ckelner: needed to fit outside the "box"
+    this.text.strokeThickness = 80;
+    this.text.align = 'center'; // center horiz and vert
+    this.text.y = 100; // 100 from top
+    this.text.inputEnabled = true;
+    this.text.input.enableDrag();
+    this.text.events.onInputOver.add( Golemancer.Menu.prototype.menuOver, this );
+    this.text.events.onInputOut.add( Golemancer.Menu.prototype.menuOut, this );
   },
   menuOut: function() {
-    this.text.fill = '#0000ff';
+    this.text.fill = '#fff';
   },
   menuOver: function() {
     this.text.fill = '#ff00ff';
