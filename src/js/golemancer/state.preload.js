@@ -4,11 +4,12 @@ Golemancer.Preload = function(game){
 
 Golemancer.Preload.prototype = {
   preload: function(){
-    this.preloadBar = this.add.sprite(356, 370, 'preloaderBar');
-    this.load.setPreloadSprite( this.preloadBar );
-    this.game.stage.backgroundColor = '#000'; // set to black
+    this.preload_bar = this.add.sprite( 1404, 66, 'progress_bar' );
+    this.preload_bar.anchor.setTo( 0.5, 0.5 );
+    this.load.setPreloadSprite( this.preload_bar );
   },
   create: function(){
-   this.game.state.start('Load');
+    //Load menu
+    //this.game.state.start('Load');
   }
 };
