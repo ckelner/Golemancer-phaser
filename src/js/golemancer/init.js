@@ -4,8 +4,8 @@
 */
 
 // setup custom Golemancer game object
-Golemancer.width = tile_size*cols;
-Golemancer.height = tile_size*rows;
+Golemancer.width = tile_size * cols;
+Golemancer.height = tile_size * rows;
 Golemancer.camera = { x:0, y:0 };
 Golemancer.scene = 1;
 Golemancer.load_progress = 0; // set to value 0 through 100
