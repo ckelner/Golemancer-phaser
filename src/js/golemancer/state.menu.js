@@ -11,10 +11,9 @@ Golemancer.Menu.prototype =  {
     }
     // start title music
     Golemancer.game.music = Golemancer.title_music;
-    Golemancer.game.music.volume = 0.5;
     /* arguements:
       marker? (leave blank ''), start position (0),
-      volume (full volume), loop (true)
+      volume (quarter volume), loop (true)
     */
     Golemancer.game.music.play( '' , 0, 1, true );
   },
@@ -22,6 +21,7 @@ Golemancer.Menu.prototype =  {
     if( this.game.input.activePointer.isDown ) {
       //this.game.state.start( 'Workshop' );
     }
+    Golemancer.game.music.play( '' , 0, 0.25, true );
   },
   setupMenu: function() {
     // Game title
