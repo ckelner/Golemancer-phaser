@@ -12,6 +12,7 @@ Golemancer.Preload.prototype = {
     );
     this.game.load.setPreloadSprite( this.preload_bar );
     this.game.load.audio( 'title_music', 'assets/music/title.mp3' );
+    Golemancer.title_music = this.game.add.sound( 'title_music' );
   },
   create: function() {
     //Load menu
