@@ -9,6 +9,7 @@ Golemancer.height = tile_size * rows;
 Golemancer.camera = { x:0, y:0 };
 Golemancer.scene = 1;
 Golemancer.load_progress = 0; // set to value 0 through 100
+Golemancer.google_font_ready = false;
 
 // create phaser game object
 Golemancer.game = new Phaser.Game(
