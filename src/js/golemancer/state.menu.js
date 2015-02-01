@@ -15,12 +15,6 @@ Golemancer.Menu.prototype =  {
       marker? (leave blank ''), start position (0),
       volume (quarter volume), loop (true)
     */
-    Golemancer.game.music.play( '' , 0, 1, true );
-  },
-  update: function() {
-    if( this.game.input.activePointer.isDown ) {
-      //this.game.state.start( 'Workshop' );
-    }
     Golemancer.game.music.play( '' , 0, 0.25, true );
   },
   setupMenu: function() {
@@ -63,5 +57,10 @@ Golemancer.Menu.prototype =  {
       function() { this.new_game.fill = '#fff'; },
       this
     );
+    this.new_game.events.onInputUp.add( this.clickNewGame, this );
+  },
+  clickNewGame: function(){
+    alert("new game yay!");
+    //this.game.state.start( 'Workshop' );
   }
 };
