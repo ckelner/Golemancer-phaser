@@ -1,4 +1,4 @@
-Golemancer.Preload = function(game){
+Golemancer.Preload = function( game ) {
   this.game = game;
 };
 
@@ -13,7 +13,7 @@ Golemancer.Preload.prototype = {
     this.game.load.setPreloadSprite( this.preload_bar );
     this.game.load.audio( 'title_music', 'assets/music/title.mp3' );
   },
-  create: function(){
+  create: function() {
     //Load menu
     //this.game.state.start('Load');
   }
