@@ -60,7 +60,7 @@ Golemancer.Menu.prototype =  {
     this.new_game.events.onInputUp.add( this.clickNewGame, this );
   },
   clickNewGame: function(){
-    alert("new game yay!");
-    //this.game.state.start( 'Workshop' );
+    Golemancer.game.music.fadeOut( 3000 );
+    this.game.state.start( 'Workshop' );
   }
 };
