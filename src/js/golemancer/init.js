@@ -19,7 +19,8 @@ Golemancer.game = new Phaser.Game(
 );
 
 // game states
+Golemancer.game.state.add('Boot', Golemancer.Boot);
 Golemancer.game.state.add('Preload', Golemancer.Preload);
 
 // start the game
-Golemancer.game.state.start('Preload');
+Golemancer.game.state.start('Boot');
