@@ -15,6 +15,6 @@ Golemancer.Preload.prototype = {
   },
   create: function() {
     //Load menu
-    //this.game.state.start('Load');
+    this.game.state.start('Menu');
   }
 };
