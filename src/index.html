@@ -9,10 +9,17 @@
   </head>
   <body>
     <div id="game"></div>
-    <!-- Javascript load -->
+    <!-- Javascript; Load order is important-->
+    <!-- Phaser Lib & Plugins -->
     <script type="text/javascript" src="js/lib/phaser/phaser.min.js"></script>
     <!-- only include when debugging
       <script type="text/javascript" src="js/lib/phaser/plugins/phaser-debug.js"></script>
     -->
+    <!-- Golemancer Files -->
+    <script type="text/javascript" src="js/golemancer/globals.js"></script>
+    <!-- Golemancer Game States -->
+    <script type="text/javascript" src="js/golemancer/state.preload.js"></script>
+    <!-- Misc Golemancer files -->
+    <script type="text/javascript" src="js/golemancer/init.js"></script>
   </body>
 </html>
