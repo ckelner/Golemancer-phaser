@@ -1,16 +1,7 @@
 /*
-  - Initializes Phaser and Golemancer game objects
+  - Initializes Phaser
   - Starts the Golemancer game
 */
-
-// setup custom Golemancer game object
-Golemancer.width = tile_size * cols;
-Golemancer.height = tile_size * rows;
-Golemancer.camera = { x:0, y:0 };
-Golemancer.scene = 1;
-Golemancer.load_progress = 0; // set to value 0 through 100
-Golemancer.google_font_ready = false;
-
 // create phaser game object
 Golemancer.game = new Phaser.Game(
   Golemancer.width,
@@ -23,6 +14,7 @@ Golemancer.game = new Phaser.Game(
 Golemancer.game.state.add( 'Boot', Golemancer.Boot );
 Golemancer.game.state.add( 'Preload', Golemancer.Preload );
 Golemancer.game.state.add( 'Menu', Golemancer.Menu );
+Golemancer.game.state.add( 'Cabin', Golemancer.Cabin );
 
 // start the game
 Golemancer.game.state.start( 'Boot' );
