@@ -4,7 +4,10 @@ Golemancer.Menu = function( game ) {
 
 Golemancer.Menu.prototype =  {
   create: function() {
+    this.setupMusic();
     this.setupMenu();
+  },
+  setupMusic: function() {
     // stop any ongoing music
     if( Golemancer.game.music ) {
       Golemancer.game.music.stop();
