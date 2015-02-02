@@ -64,6 +64,6 @@ Golemancer.Menu.prototype =  {
   },
   clickNewGame: function(){
     Golemancer.game.music.fadeOut( 3000 );
-    this.game.state.start( 'Workshop' );
+    this.game.state.start( 'Cabin' );
   }
 };

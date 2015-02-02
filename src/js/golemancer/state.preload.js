@@ -24,6 +24,21 @@ Golemancer.Preload.prototype = {
     // Music
     this.game.load.audio( 'title_music', 'assets/music/title.mp3' );
     Golemancer.title_music = this.game.add.sound( 'title_music' );
+    // Json
+    this.game.load.tilemap(
+      'cabin',
+      'json/cabin.json',
+      null,
+      Phaser.Tilemap.TILED_JSON
+    );
+    // Sprites
+    this.game.load.spritesheet(
+      'cabin',
+      'assets/sprites/cabin.png',
+      Golemancer.tile_size,
+      Golemancer.tile_size,
+      10
+    );
   },
   create: function() {
     /*
