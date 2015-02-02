@@ -4,6 +4,14 @@ Golemancer.Preload = function( game ) {
 
 Golemancer.Preload.prototype = {
   preload: function() {
+    var style = { font: "45px Arial", fill: "#fff", align: "center" };
+    var loading_text = this.game.add.text(
+      this.game.world.centerX,
+      this.game.world.centerY - 75,
+      "Loading...",
+      style
+    );
+    loading_text.anchor.set( 0.5 );
     this.preload_bar = this.add.sprite(
       // position center minus half the width/height of bar
       (Golemancer.width/2)-351,
