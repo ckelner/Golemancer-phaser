@@ -32,6 +32,7 @@ Golemancer.Preload.prototype = {
       Phaser.Tilemap.TILED_JSON
     );
     // Sprites
+    /* cabin */
     this.game.load.spritesheet(
       'cabin',
       'assets/sprites/cabin.png',
@@ -39,6 +40,11 @@ Golemancer.Preload.prototype = {
       Golemancer.tile_size,
       10
     );
+
+    /* player */
+    Golemancer.player = new Golemancer.Player(this.game);
+    Golemancer.player.preload(); 
+
   },
   create: function() {
     /*
