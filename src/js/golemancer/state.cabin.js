@@ -21,8 +21,15 @@ Golemancer.Cabin.prototype = {
     this.map.setCollision(1); //wall
 
     this.physics.p2.convertTilemap( this.map, this.cabin_layer );
+
+    Golemancer.player.tile_x = 4;
+    Golemancer.player.tile_y = 4;
+    Golemancer.player.create();
   },
   update: function() {
-
+    Golemancer.player.update();
+  },
+  render: function() {
+    Golemancer.player.sprite.body.debug = true;
   }
 };
