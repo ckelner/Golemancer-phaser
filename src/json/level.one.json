@@ -8,7 +8,7 @@
   "tileheight":32,
   "layers":[
     {
-      "name":"cabin",
+      "name":"level_one",
       "height":20,
       "width":24,
       "opacity":1,
@@ -67,8 +67,8 @@
   ],
   "tilesets":[
     {
-      "name":"cabin",
-      "image":"..\/images\/cabin.png",
+      "name":"level_one",
+      "image":"..\/images\/level.one.png",
       "firstgid":1,
       "imageheight":160,
       "imagewidth":160,
